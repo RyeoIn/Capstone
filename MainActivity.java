@@ -14,8 +14,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button1 = findViewById(R.id.button);
-        Button button2 = findViewById(R.id.button2);
+        Button button1 = findViewById(R.id.button2);
+        Button button2 = findViewById(R.id.button3);
+        Button button3 = findViewById(R.id.settings);
+        Button button4 = findViewById(R.id.info);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showToast("저장소 화면으로 전환됩니다.");
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showToast("설정 창을 띄웁니다.");
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showToast("설명 창을 띄웁니다.");
             }
         });
     }
